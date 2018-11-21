@@ -9,7 +9,7 @@ To use this plugin, add `flutter_router` as a [dependency in your pubspec.yaml f
 ## Usage
 ``` dart
 // Import package
-import 'package:flutter_router/router.dart';
+import 'package:flutter_router/flutter_router.dart';
 ```
 
 ``` dart

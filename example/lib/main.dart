@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_router/router.dart';
+import 'package:flutter_router/flutter_router.dart';
 
 void main() => runApp(MaterialApp(
   onGenerateRoute: Router({
