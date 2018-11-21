@@ -1,0 +1,21 @@
+name: flutter_router
+description: Flutter routing library that adds flexible routing options like parameters and clear route definitions
+version: 1.0.0
+authors:
+- Peter Zagoranski <peter.zagoranski@gmail.com>
+homepage: https://github.com/peterzagoranski/flutter_router
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  uri: ^0.11.3+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:

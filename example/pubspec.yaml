@@ -1,0 +1,23 @@
+name: flutter_router_example
+description: Demonstrates how to use the flutter_router library.
+version: 1.0.0
+authors:
+- Peter Zagoranski <peter.zagoranski@gmail.com>
+homepage: https://github.com/peterzagoranski/flutter_router
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_router:
+    path: ../
+
+flutter:
+  uses-material-design: true
