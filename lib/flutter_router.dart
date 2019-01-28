@@ -28,3 +28,20 @@ abstract class _Router {
   final Map<String, RouterBuilder> definitions;
   final PageRouteFactory page;
 }
+
+class Navigators extends _Navigators {
+  Navigators(final List<Navigator> navigators) : super(navigators, page: <Null>(settings, builder) => MaterialPageRoute<Null>(settings: settings, builder: builder));
+}
+
+abstract class _Navigators {
+  _Navigators(this.navigators, { this.page }) : assert(null != navigators || null != page);
+
+  Route<dynamic> get(final RouteSettings settings) {
+    final matches = this.navigators.where((navigator) => navigator.initialRoute.startsWith(settings.name));
+
+    return null != matches && matches.length > 0 ? this.page(settings, (context) => matches.first) : null;
+  }
+  
+  final List<Navigator> navigators;
+  final PageRouteFactory page;
+}
