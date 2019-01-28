@@ -1,6 +1,6 @@
 name: flutter_router_example
 description: Demonstrates how to use the flutter_router library.
-version: 1.0.4
+version: 1.0.5
 authors:
 - Peter Zagoranski <peter.zagoranski@gmail.com>
 homepage: https://github.com/peterzagoranski/flutter_router
