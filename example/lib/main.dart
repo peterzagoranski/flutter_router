@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_router/flutter_router.dart';
+import 'package:flutter_router/flutter_router.dart' as FRouter;
 
 void main() => runApp(MaterialApp(
-  onGenerateRoute: Router({
-    '/accounts/{id}': (context, match) => Account(match.parameters['id']),
+  onGenerateRoute: FRouter.Router({
+    '/accounts/{id}': (context, match) => Account(match!.parameters['id']!),
     '/': (context, match) => Index(),
   }).get,
 ));
