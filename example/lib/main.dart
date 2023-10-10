@@ -4,8 +4,8 @@ import 'package:flutter_router/flutter_router.dart' as FRouter;
 
 void main() => runApp(MaterialApp(
   onGenerateRoute: FRouter.Router({
-    '/accounts/{id}': (context, match) => Account(match!.parameters['id']!),
-    '/': (context, match) => Index(),
+    '/accounts/{id}': (context, match, settings) => Account(match!.parameters['id']!),
+    '/': (context, match, settings) => Index(),
   }).get,
 ));
 

@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uri/uri.dart';
 
-typedef Widget RouterBuilder(BuildContext context, UriMatch? match);
+typedef Widget RouterBuilder(BuildContext context, UriMatch? match, RouteSettings settings);
 
 class Router extends _Router {
   Router(final Map<String, RouterBuilder> definitions) : super(definitions, page: (<Null>(settings, builder) => new MaterialPageRoute<Null>(builder: builder, settings: settings)));
@@ -22,7 +22,7 @@ abstract class _Router {
     final matches = this.definitions.keys.where((route) => UriParser(UriTemplate(route)).matches(Uri.parse(settings.name!)));
     final route = matches.length > 0 ? matches.first : null;
 
-    return null != route ? this.page(settings, (context)=> this.definitions[route]!(context, UriParser(UriTemplate(route)).match(Uri.parse(settings.name!)))) : null;
+    return null != route ? this.page(settings, (context)=> this.definitions[route]!(context, UriParser(UriTemplate(route)).match(Uri.parse(settings.name!)), settings)) : null;
   }
 
   final Map<String, RouterBuilder> definitions;
