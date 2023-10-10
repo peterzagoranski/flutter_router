@@ -1,3 +1,3 @@
-## [1.0.0] - 21.11.2018
+## [1.2.0] - 10.10.2023
 
-* First release
+* Added route settings to params
